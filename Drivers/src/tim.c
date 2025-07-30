@@ -1,4 +1,7 @@
 #include "tim.h"
+#include "gpio.h"
+#include "rcc.h"
+
 void TIM_Cmd(volatile TIM_TypeDef *TIMx, uint32_t cmd)
 {
 	if (cmd != DISABLE)

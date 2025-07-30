@@ -1,4 +1,7 @@
 #include "uart.h"
+#include "rcc.h"
+#include "gpio.h"
+#include "exti.h"
 
 uint16_t USART_GetBaudRate(uint32_t pclk, uint32_t baudrate)
 {

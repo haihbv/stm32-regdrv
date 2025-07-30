@@ -6,7 +6,6 @@ extern "C" {
 #endif
 
 #include "stm32system.h"
-#include "peripherals.h"
 
 #define CR2_ADON_Set               		((uint32_t)0x00000001)
 #define CR2_ADON_Reset              	((uint32_t)0xFFFFFFFE)

@@ -7,7 +7,7 @@ extern "C"
 #endif
 
 #include "stm32system.h"
-#include "peripherals.h"
+
 typedef enum
 {
     GPIO_MODE_INPUT = 0x00, /*!< Input floating mode */

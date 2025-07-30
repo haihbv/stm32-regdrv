@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\Drivers\src;..\Drivers\inc;..\Drivers\ring_buffer;..\Drivers\variadic_uart;..\System</IncludePath>
+              <IncludePath>..\System;..\Drivers\Inc;..\Drivers\Src;..\Modules\ring_buffer;..\Modules\variadic_uart;..\Core</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -396,17 +396,17 @@
             <File>
               <FileName>peripherals.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\STM32\peripherals.h</FilePath>
+              <FilePath>..\System\peripherals.h</FilePath>
             </File>
             <File>
               <FileName>stm32system.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\STM32\stm32system.h</FilePath>
+              <FilePath>..\System\stm32system.h</FilePath>
             </File>
             <File>
               <FileName>stm32util.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\STM32\stm32util.h</FilePath>
+              <FilePath>..\System\stm32util.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -453,6 +453,11 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers\src\uart.c</FilePath>
             </File>
+            <File>
+              <FileName>spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\src\spi.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -498,6 +503,11 @@
               <FileType>5</FileType>
               <FilePath>..\Drivers\inc\uart.h</FilePath>
             </File>
+            <File>
+              <FileName>spi.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\inc\spi.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -506,12 +516,12 @@
             <File>
               <FileName>ring_buffer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\ring_buffer\ring_buffer.c</FilePath>
+              <FilePath>..\Modules\ring_buffer\ring_buffer.c</FilePath>
             </File>
             <File>
               <FileName>ring_buffer.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Drivers\ring_buffer\ring_buffer.h</FilePath>
+              <FilePath>..\Modules\ring_buffer\ring_buffer.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -521,12 +531,12 @@
             <File>
               <FileName>uart_vprintf.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\variadic_uart\uart_vprintf.c</FilePath>
+              <FilePath>..\Modules\variadic_uart\uart_vprintf.c</FilePath>
             </File>
             <File>
               <FileName>uart_vprintf.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Drivers\variadic_uart\uart_vprintf.h</FilePath>
+              <FilePath>..\Modules\variadic_uart\uart_vprintf.h</FilePath>
             </File>
           </Files>
         </Group>

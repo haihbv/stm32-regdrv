@@ -7,7 +7,6 @@ extern "C"
 #endif
 
 #include "stm32system.h"
-#include "peripherals.h"
 	
 #define USART_CR1_UE            (1U << 13)  // USART Enable
 #define USART_CR1_M             (1U << 12)  // Word Length

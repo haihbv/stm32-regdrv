@@ -8,7 +8,6 @@ extern "C"
 #endif
 
 #include "stm32system.h"
-#include "peripherals.h"
 
 #define EXTI_MODE_RISING    0x01 /*!< Rising edge trigger selection */
 #define EXTI_MODE_FALLING   0x02 /*!< Falling edge trigger selection */

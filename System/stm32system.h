@@ -25,7 +25,8 @@ extern "C" {
 #define USART1_Base			(0x40013800UL)
 #define USART2_Base			(0x40004400UL)
 #define USART3_Base			(0x40004800UL)
-
+#define SPI1_Base           (0x40013000UL)
+#define SPI2_Base           (0x40003800UL)
 // ===== Peripheral Structs =====
 
 // FLASH registers
@@ -645,6 +646,20 @@ typedef struct
     __IO uint32_t GTPR;
 } USART_TypeDef;
 
+// SPI registers
+typedef struct
+{
+    __IO uint32_t CR1;
+    __IO uint32_t CR2;
+    __IO uint32_t SR;
+    __IO uint32_t DR;
+    __IO uint32_t CRCPR;
+    __IO uint32_t RXCRCR;
+    __IO uint32_t TXCRCR;
+    __IO uint32_t I2SCFGR;
+    __IO uint32_t I2SPR;
+} SPI_TypeDef;
+
 // ===== Peripheral instance =====
 #define GPIOA 				((__IO GPIO_TypeDef *)GPIOA_BASE)
 #define GPIOB 				((__IO GPIO_TypeDef *)GPIOB_BASE)
@@ -663,9 +678,12 @@ typedef struct
 #define USART1              ((__IO USART_TypeDef *)USART1_Base)
 #define USART2              ((__IO USART_TypeDef *)USART2_Base)
 #define USART3              ((__IO USART_TypeDef *)USART3_Base)
+#define SPI1                ((__IO SPI_TypeDef *)SPI1_Base)
+#define SPI2                ((__IO SPI_TypeDef *)SPI2_Base)
 
 #ifdef __cplusplus
 }
 #endif
 
 #endif /* __STM32SYSTEM_H */
+

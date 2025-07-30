@@ -1,12 +1,7 @@
 #include "gpio.h"
-#include <stddef.h>
 
 void GPIO_Init(volatile GPIO_TypeDef *GPIOx, GPIO_InitTypeDef *GPIO_InitStruct)
 {
-    if ((GPIOx == NULL) || (GPIO_InitStruct == NULL)) {
-        return; 
-    }
-
     uint32_t pin_mask = GPIO_InitStruct->Pin & 0xFFFF;
     uint32_t pos, config;
 

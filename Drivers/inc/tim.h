@@ -7,7 +7,6 @@ extern "C"
 #endif
 
 #include "stm32system.h"
-#include "peripherals.h"
 
 /**
   * @brief  TIM Time base Configuration Structure definition

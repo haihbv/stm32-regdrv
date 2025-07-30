@@ -13,6 +13,7 @@ extern "C"
 #include "tim.h"
 #include "adc.h"
 #include "uart.h"
+#include "spi.h"
 
 #ifdef __cplusplus
 }
