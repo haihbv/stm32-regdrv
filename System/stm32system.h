@@ -27,8 +27,11 @@ extern "C" {
 #define USART3_Base			(0x40004800UL)
 #define SPI1_Base           (0x40013000UL)
 #define SPI2_Base           (0x40003800UL)
-// ===== Peripheral Structs =====
+#define I2C1_Base			(0x40005400UL)
+#define I2C2_Base			(0x40005800UL)
+#define USB_Base			(0x40005C00UL)
 
+// ===== Peripheral Structs =====
 // FLASH registers
 typedef union
 {
@@ -477,7 +480,7 @@ typedef union
         __IO uint32_t BR13      : 1;      /*!< Bit 13 BR13: Port x Reset bit 13 */
         __IO uint32_t BR14      : 1;      /*!< Bit 14 BR14: Port x Reset bit 14 */
         __IO uint32_t BR15      : 1;      /*!< Bit 15 BR15: Port x Reset bit 15 */
-        __IO uint32_t RESERVED : 16; /*!< Bits 31:16 Reserved, must be kept at reset value */
+        __IO uint32_t RESERVED  : 16; /*!< Bits 31:16 Reserved, must be kept at reset value */
     } BITS;
 } GPIO_BRR_t;
 typedef union
@@ -660,6 +663,39 @@ typedef struct
     __IO uint32_t I2SPR;
 } SPI_TypeDef;
 
+// I2C registers
+typedef struct
+{
+	__IO uint32_t CR1;
+	__IO uint32_t CR2;
+	__IO uint32_t OAR1;
+	__IO uint32_t OAR2;
+	__IO uint32_t DR;
+	__IO uint32_t SR1;
+	__IO uint32_t SR2;
+	__IO uint32_t CCR;
+	__IO uint32_t TRISE;
+} I2C_TypeDef;
+
+// USB registers
+typedef struct
+{
+	__IO uint32_t EP0R;
+	__IO uint32_t EP1R;
+	__IO uint32_t EP2R;
+	__IO uint32_t EP3R;
+	__IO uint32_t EP4R;
+	__IO uint32_t EP5R;
+	__IO uint32_t EP6R;
+	__IO uint32_t EP7R;
+	__IO uint32_t RESERVED[3];
+	__IO uint32_t CNTR;
+	__IO uint32_t ISTR;
+	__IO uint32_t FNR;
+	__IO uint32_t DADDR;
+	__IO uint32_t BTABLE;
+} USB_TypeDef;
+
 // ===== Peripheral instance =====
 #define GPIOA 				((__IO GPIO_TypeDef *)GPIOA_BASE)
 #define GPIOB 				((__IO GPIO_TypeDef *)GPIOB_BASE)
@@ -680,6 +716,9 @@ typedef struct
 #define USART3              ((__IO USART_TypeDef *)USART3_Base)
 #define SPI1                ((__IO SPI_TypeDef *)SPI1_Base)
 #define SPI2                ((__IO SPI_TypeDef *)SPI2_Base)
+#define I2C1				((__IO I2C_TypeDef *)I2C1_Base)
+#define I2C2				((__IO I2C_TypeDef *)I2C2_Base)
+#define USB					((__IO USB_TypeDef *)USB_Base)
 
 #ifdef __cplusplus
 }
